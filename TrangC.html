@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phong Vũ - Trang Chủ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', Times, serif
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 40px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-bar {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      padding: 10px 30px;
+    }
+
+    .search-bar input {
+      padding: 8px;
+      width: 60%;
+      max-width: 400px;
+      border: 1px solid #ccc;
+      border-radius: 6px 0 0 6px;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 8px 15px;
+      border: none;
+      background-color: #0d6efd;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    .slider {
+      width: auto;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      width: auto;
+      height: auto;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    .products {
+      padding: 40px 30px;
+    }
+
+    .products h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .product p {
+      color: #e53935;
+      font-weight: bold;
+    }
+
+    footer {
+      
+      color: black;
+      text-align: left;
+      float: left;
+      padding-left: 100px ;
+      
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<>
+
+  <header>
+    <img src="https://phongvu.vn/logo.png" alt="Phong Vũ Logo" class="logo">
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#">Sản phẩm</a>
+      <a href="#">Khuyến mãi</a>
+      <a href="#">Giỏ hàng của bạn</a>
+      <a href="#">Hotline: 19006867</a>
+      <a href="#">Đăng nhập <br> Đăng Ký</a>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+    <button>Tìm kiếm</button>
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="./IMG/unnamed.webp" alt="Ảnh của PV">
+    </div>
+  </div>
+
+  <section class="products">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="./IMG/TC.webp" alt="PS5">
+        <h3>Tay cầm Game Pad không dây Sony Playstation PS5 DUALSENSE White (CFI-ZCT1G) (Trắng)</h3>
+        <p>1.999.000đ</p>
+      </div>
+      <div class="product">
+        <img src="./IMG/TG.webp" alt="Tai Nghe NOVA ">
+        <h3>Tai nghe choàng đầu gaming không dây Arctis Nova Pro Wireless kèm Infinity Power System SteelSeries</h3>
+        <p>8.999.000đ</p>
+      </div>
+      <div class="product">
+        <img src="./IMG/BP.webp" alt="Bàn phím ASUS">
+        <h3>Bàn phím gaming không dây ASUS ROG Azoth Extreme NX Snow Switch - Đen (90MP03MA-BKUA01)</h3>
+        <p>13.899.000₫</p>
+      </div>
+      <div class="product">
+        <img src="./IMG/C.webp" alt="Chuột ASUS">
+        <h3>Chuột gaming Asus ROG Harpe Ace Extreme (Đen) (90MP03U0-BMUA00)</h3>
+        <p>5.999.000đ</p>
+      </div>
+      <div class="product">
+        <img src="./IMG/PC.webp" alt="PC PV Gaming">
+        <h3>PC PV Gaming Cupid E006 (Intel Core i5-12400F/ GeForce RTX 3050/ 1 x 16GB/ 512GB SSD/ Free DOS)</h3>
+        <p>14.990.000₫</p>
+      </div>
+        <div class="product">
+          <img src="./IMG/MH.webp" alt="Màn hình MSI">
+          <h3>Màn hình Msi PRO MP242L 23.8" (FHD 1920 x 1080/ IPS/ 100Hz/ 1 ms)</h3>
+          <p>10.990.000₫</p>
+      </div>
+    </div>
+  </section>
+  <hr color="blue">
+  <footer>
+    
+    <br>
+    <h3>Hỗ Trợ Khách Hàng</h3>
+    <br>
+    <p>Thẻ ưu đãi</p>
+    <p>Hướng dẫn</p>
+    <p>Dịch vụ sữa chữa</p>
+    <p>Chính sách trả góp</p>
+  </footer>
+  <footer>
+  <br>
+  <h3>Chính sách mua hàng</h3>
+  <br>
+  <p>Chính sách mua hàng</p>
+  <p>Thông tin Phong Vũ</p>
+  <p>Điều kiện giao dịch chung</p>
+  <P>Giới thiệu Phong Vũ</p>
+  </footer> 
+
+</body>
+</html>

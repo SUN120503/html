@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phong Vũ - Sản phẩm</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo { height: 40px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      padding: 15px 30px;
+      background-color: #e9ecef;
+    }
+
+    .search-bar input {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px 0 0 6px;
+    }
+
+    .search-bar button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #0d6efd;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      padding: 30px;
+      gap: 20px;
+    }
+
+    .filter {
+      width: 200px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .filter h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .filter label {
+        width: auto;
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .products {
+      flex: 1;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: #fff;
+
+      padding: 15px;
+      border-radius: 1px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .product p {
+      color: #e53935;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product button {
+      padding: 8px 15px;
+      border: none;
+      background-color: #0d6efd;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .pagination button {
+      margin: 0 5px;
+      padding: 8px 14px;
+      border: none;
+      background-color: #ddd;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .pagination button.active {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://phongvu.vn/logo.png" alt="Logo Phong Vũ" class="logo">
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Khuyến mãi</a>
+        <a href="#">Giỏ hàng của bạn</a>
+        <a href="#">Hotline: 19006867</a>
+        
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+    <button>Tìm</button>
+  </div>
+
+  <div class="container">
+    <div class="filter">
+      <h3>Danh mục</h3>
+      <label><input type="checkbox"> Laptop</label>
+      <label><input type="checkbox"> Sản phẩm Apple</label>
+      <label><input type="checkbox"> Điện máy</label>
+      <label><input type="checkbox"> Điện gia dụng</label>
+      <label><input type="checkbox"> PC - Máy tính bàn</label>
+      <label><input type="checkbox"> Màn hình</label>
+      <label><input type="checkbox"> Phụ kiện</label>
+      <label><input type="checkbox"> Linh kiện</label>
+      <label><input type="checkbox"> Điện thoại - Phụ kiện</label>
+      <label><input type="checkbox"> Thiết bị âm thanh</label>
+      <label><input type="checkbox"> Thiết bị văn phòng</label>
+      <label><input type="checkbox"> Giải pháp doanh nghiệp</label>
+    </div>
+
+    <section class="products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-list">
+          <div class="product">
+            <img src="./IMG/TC.webp" alt="PS5">
+            <h3>Tay cầm Game Pad không dây Sony Playstation PS5 DUALSENSE White (CFI-ZCT1G) (Trắng)</h3>
+            <p>1.999.000đ</p>
+          </div>
+          <div class="product">
+            <img src="./IMG/TG.webp" alt="Tai Nghe NOVA ">
+            <h3>Tai nghe choàng đầu gaming không dây Arctis Nova Pro Wireless kèm Infinity Power System SteelSeries</h3>
+            <p>8.999.000đ</p>
+          </div>
+          <div class="product">
+            <img src="./IMG/BP.webp" alt="Bàn phím ASUS">
+            <h3>Bàn phím gaming không dây ASUS ROG Azoth Extreme NX Snow Switch - Đen (90MP03MA-BKUA01)</h3>
+            <p>13.899.000₫</p>
+          </div>
+          <div class="product">
+            <img src="./IMG/C.webp" alt="Chuột ASUS">
+            <h3>Chuột gaming Asus ROG Harpe Ace Extreme (Đen) (90MP03U0-BMUA00)</h3>
+            <p>5.999.000đ</p>
+          </div>
+          <div class="product">
+            <img src="./IMG/PC.webp" alt="PC PV Gaming">
+            <h3>PC PV Gaming Cupid E006 (Intel Core i5-12400F/ GeForce RTX 3050/ 1 x 16GB/ 512GB SSD/ Free DOS)</h3>
+            <p>14.990.000₫</p>
+          </div>
+            <div class="product">
+              <img src="./IMG/MH.webp" alt="Màn hình MSI">
+              <h3>Màn hình Msi PRO MP242L 23.8" (FHD 1920 x 1080/ IPS/ 100Hz/ 1 ms)</h3>
+              <p>10.990.000₫</p>
+          </div>
+        </div>
+
+      <div class="pagination">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>Tiếp &raquo;</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
